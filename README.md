@@ -1,2 +1,2 @@
-# COMMIT
+# COMMI
 Projet JEE janvier 2022 à COMMIT SCHOOL
