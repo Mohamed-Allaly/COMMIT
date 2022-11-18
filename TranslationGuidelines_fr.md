@@ -26,7 +26,7 @@ Une chaîne spécifique peut avoir de nombreuses occurrences différentes sur l'
 
 Dans le coin supérieur droit de la traduction sur Weblate, vous remarquerez le mot `Clé` en gras, suivi d'une chaîne de caractères. Cette chaîne peut vous aider à savoir approximativement (parfois exactement) dans quel module ou fenêtre de l'interface graphique se trouve le terme que vous traduisez, comme illustré ci-dessous.
 
-![alt text][https://github.com/Mohamed-Allaly/COMMIT/blob/main/Image/1_cl%C3%A9.PNG]
+![alt text](https://github.com/Mohamed-Allaly/COMMIT/blob/main/Image/1_clé.PNG)
 
 
 ###  Chaînes à proximité
