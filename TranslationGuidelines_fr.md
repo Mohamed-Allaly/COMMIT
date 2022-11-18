@@ -18,3 +18,92 @@ Si vous vous inscrivez en utilisant GitHub, vous serez redirigé vers une page G
 
 **Remarque** : veillez à répéter les étapes: `Mettre à jour les fichiers de traduction`  et `redémarrer l'application` de temps à autre pour disposer des traductions les plus récentes et les plus complètes, car de nouveaux termes peuvent avoir été traduits depuis votre dernière utilisation de Slicer.
 
+## Localisation d'une chaîne de caractères sur l'interface utilisateur graphique (GUI) du Slicer
+
+Une chaîne spécifique peut avoir de nombreuses occurrences différentes sur l'interface graphique de Slicer, parfois même dans le même module.  La position et la fonction d'un élément sur l'interface peuvent affecter sa signification et, par extension, sa traduction. Il est donc utile de connaître ces quelques conseils pour identifier exactement l'élément de l'interface que vous traduisez sur Weblate à un moment donné.
+
+### L'indicateur “Clé”
+
+Dans le coin supérieur droit de la traduction sur Weblate, vous remarquerez le mot `Clé` en gras, suivi d'une chaîne de caractères. Cette chaîne peut vous aider à savoir approximativement (parfois exactement) dans quel module ou fenêtre de l'interface graphique se trouve le terme que vous traduisez, comme illustré ci-dessous.
+
+
+
+###  Chaînes à proximité
+
+Comme mentionné ci-dessus, il se peut que vous ayez plusieurs occurrences d'un terme dans l'interface d'un même module. Dans ce cas, il peut être utile de s'appuyer sur les éléments qui entourent celui que vous traduisez. Weblate associe chaque chaîne de caractères à une liste de chaînes de caractères qui se trouvent directement avant ou après l'élément dans le code de l'interface graphique.
+
+
+
+### "Emplacement de la chaîne source"
+
+La balise `source string location` de Weblate peut vous aider à aller un peu plus loin et à trouver exactement la ligne de code qui contient la chaîne que vous êtes en train de traduire. Elle se trouve dans la case `String Information` en bas à droite.
+
+
+
+*(la raison pour laquelle les numéros de ligne ne correspondent pas dans cet exemple spécifique est que le code a été mis à jour entre le moment où les fichiers de traduction ont été téléchargés et maintenant)*
+
+## Traduction de termes difficiles
+
+Sur l'interface complexe de 3D Slicer, certains termes peuvent avoir des significations très spécifiques au contexte et risquent de perdre de leur précision s'ils ne sont pas traduits avec soin. Repérer la chaîne de caractères sur l'interface ou utiliser l'élément qu'elle désigne peut aider à mieux comprendre la définition exacte du terme et donc à le traduire le plus précisément possible.
+Une autre façon de garantir la meilleure qualité de traduction est de tirer parti de l'approche communautaire sur laquelle repose notre processus d'internationalisation.
+
+
+### Le bouton `Suggérer`
+
+Lorsque vous traduisez une chaîne de caractères sur Weblate, vous avez la possibilité de soumettre votre traduction et de passer à l'élément suivant, de soumettre votre traduction et de rester sur la même page ou de soumettre votre traduction en tant que suggestion.
+
+
+ Lorsque vous choisissez cette dernière option, les différences entre votre traduction et la traduction actuelle sont mises en évidence en vert et les parties qu'elles remplacent sont barrées et mises en évidence en rouge, comme illustré ci-dessous.
+
+
+
+ La suggestion peut ensuite être approuvée, modifiée ou rejetée par vous-même, un autre utilisateur ou un correcteur désigné.
+
+
+
+ Cette option est utile dans le cas où vous n'êtes pas sûr de la traduction que vous avez soumise et que vous souhaitez prendre le temps de mieux comprendre le terme avant de le confirmer ou que vous souhaitez obtenir un deuxième avis d'autres utilisateurs.
+
+
+### La section des commentaires
+
+Weblate offre également la possibilité de laisser un commentaire sur la page de traduction d'une chaîne de caractères. Cela vous permet de dialoguer avec d'autres contributeurs dans votre langue et d'entamer une conversation sur la compréhension que chacun d'entre vous a du terme et, éventuellement, de vous mettre d'accord sur une signification et une traduction communes.
+
+
+
+
+Pour vous assurer que vous restez impliqué dans les discussions liées au projet, vous pouvez mettre à jour vos paramètres afin d'être averti lorsqu'un nouveau commentaire est posté ; et si les notifications deviennent trop nombreuses, vous pouvez toujours les ajuster à votre convenance.
+Par exemple : alors qu'un correcteur désigné devrait être informé de toutes les mises à jour des discussions, vous pouvez choisir de configurer Weblate pour qu'il vous notifie uniquement les commentaires relatifs aux traductions que vous avez soumises ou à celles dans lesquelles vous êtes mentionné.
+
+
+
+Vous pouvez modifier vos paramètres de notification [ici](https://hosted.weblate.org/accounts/profile/#notifications).
+
+
+### Chaînes de caractères intraduisibles
+
+Toute chaîne commençant par `vtk` ou contenant `MRML` ne doit pas être traduite et doit être signalée comme un bogue dans les rapports de bogue de Slicer.
+
+**Exemple :**
+
+
+
+Vous pouvez également les marquer avec le drapeau `read-only` (pour en savoir plus sur les drapeaux Weblate, cliquez [ici](https://docs.weblate.org/en/latest/admin/checks.html#customizing-behavior-using-flags)).
+
+
+
+## Validation de la traduction
+
+Il existe plusieurs façons d'indiquer qu'une traduction doit être révisée. Les plus couramment utilisées par nos contributeurs sont la case à cocher `à vérifier` et la fonction `suggérer`.
+
+
+
+## Termes du glossaire
+
+Chaque projet sur Weblate est associé à un **glossaire**. Les éléments répertoriés dans le glossaire sont ensuite liés aux chaînes de caractères qui les contiennent, dans le composant principal de traduction (lorsqu'une chaîne de caractères contient un terme du glossaire, il y aura une référence à ce terme sur la droite de l'interface dans un panneau intitulé `Glossaire`). Cela peut être utile pour traduire des termes plus ou moins difficiles à partir de l'interface.
+
+
+
+
+Le panneau `Glossaire` ne contiendra aucune information dans le cas d'un terme ou d'une chaîne qui ne figure pas dans le glossaire. En revanche, si le terme est référencé dans le glossaire, vous aurez une proposition de `traduction` ainsi que `l'explication` du terme. Vous pouvez vous fier à cette dernière pour vous assurer que vous comprenez mieux le terme et donc fournir la traduction la plus précise possible.
+
+Notez que `l'explication` n'est disponible qu'en anglais.
